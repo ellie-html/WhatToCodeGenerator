@@ -60,7 +60,8 @@ h2 {
   border-radius: 10px;
   overflow: hidden;
   padding: 2rem;
-  left: 38%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .rainbow::before {
@@ -97,18 +98,20 @@ h2 {
   .rainbow {
     width: 300px;
     height: 150px;
-    left: 10%;
   }
   .rainbow p {
     padding: 10px;
     font-size: 3rem;
   }
   h1 {
-    font-size: 4rem;
-    line-height: 70px;
+    padding-top: 80px;
+    font-size: 3rem;
+    line-height: 50px;
   }
 }
 
+/* buttons
+  ====================== */
 .draw-border {
   -webkit-box-shadow: inset 0 0 0 4px white;
           box-shadow: inset 0 0 0 4px white;
@@ -164,6 +167,7 @@ h2 {
 }
 
 .btn {
+  border-radius: 5px;
   margin: 50px;
   background: none;
   border: none;
@@ -183,10 +187,14 @@ h2 {
   ====================== */
 .top {
   background-color: #00ffb8;
-  height: 20px;
+  position: fixed;
   margin: 0;
-  padding: 0;
+  padding: 5px;
   color: #1D1D1D;
+  font-size: 1.5rem;
+  width: 100%;
+  top: 0;
+  z-index: 3;
 }
 
 #GFG_UP {
@@ -242,7 +250,19 @@ footer {
   width: 100%;
   text-align: right;
   padding: 10px;
+  bottom: 0px;
   margin-top: 100px;
+}
+
+.twitter {
+  background-color: black;
+  border: none;
+  font-family: 'Raleway', sans-serif;
+}
+
+.twitter a {
+  color: white;
+  font-size: 1rem;
 }
 
 /* flexbox
@@ -259,7 +279,6 @@ footer {
           align-items: center;
 }
 
-/* Create four equal columns that sits next to each other */
 .column {
   -webkit-box-flex: 50%;
       -ms-flex: 50%;
@@ -274,8 +293,16 @@ footer {
   margin: 50px;
 }
 
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media (max-width: 800px) {
+@media (max-width: 1600px) {
+  .theme {
+    width: 500px;
+  }
+  .code {
+    width: 500px;
+  }
+}
+
+@media (max-width: 1000px) {
   .column {
     -webkit-box-flex: 50%;
         -ms-flex: 50%;
@@ -284,8 +311,7 @@ footer {
   }
 }
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
   .column {
     -webkit-box-flex: 100%;
         -ms-flex: 100%;
@@ -302,130 +328,85 @@ footer {
     font-size: 1rem;
     margin: 20px;
   }
-}
-
-.run-animation {
-  overflow: hidden;
-  /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid orange;
-  /* The typwriter cursor */
-  white-space: nowrap;
-  /* Keeps the content on a single line */
-  margin: 0 auto;
-  /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .15em;
-  /* Adjust as needed */
-  -webkit-animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
-          animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
-}
-
-/* The typing effect */
-@-webkit-keyframes typing {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 80%;
-  }
-}
-@keyframes typing {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 80%;
+  .top {
+    font-size: 1rem;
   }
 }
 
-/* The typewriter cursor effect */
-@-webkit-keyframes blink-caret {
-  from, to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: orange;
-  }
-}
-@keyframes blink-caret {
-  from, to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: orange;
-  }
-}
-
-.run-animation2 {
-  overflow: hidden;
-  /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid orange;
-  /* The typwriter cursor */
-  white-space: nowrap;
-  /* Keeps the content on a single line */
-  margin: 0 auto;
-  /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .15em;
-  /* Adjust as needed */
-  -webkit-animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
-          animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
-}
-
-/* The typing effect */
-@-webkit-keyframes typing2 {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 80%;
-  }
-}
-@keyframes typing2 {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 80%;
-  }
-}
-
-/* The typewriter cursor effect */
-@-webkit-keyframes blink-caret2 {
-  from, to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: orange;
-  }
-}
-@keyframes blink-caret2 {
-  from, to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: orange;
-  }
-}
-
-/* width */
+/* Scroll bar*/
 ::-webkit-scrollbar {
   width: 20px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 5px grey;
-          box-shadow: inset 0 0 5px grey;
+  -webkit-box-shadow: inset 0 0 5px white;
+          box-shadow: inset 0 0 5px white;
   border-radius: 10px;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: #00ffb8;
   border-radius: 10px;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #02be89;
+}
+
+/* The Modal  */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+  background-color: #1D1D1D;
+  margin: auto auto;
+  padding: 20px;
+  border: 1px solid #00ffb8;
+  width: 80%;
+  margin-top: 5%;
+  outline: 20px solid #00ffb8;
+  outline-offset: -50px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-content p {
+  font-size: 1.5rem;
+  padding: 20px;
+  margin: 50px;
+  text-align: left;
+}
+
+@media (max-width: 1000px) {
+  .modal-content {
+    outline: none;
+  }
+  .modal-content p {
+    font-size: 1rem;
+    padding: 20px;
+    margin: 0px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
